@@ -1,0 +1,93 @@
+/* Testimonials Component Styles */
+
+.testimonials-section {
+  background-color: #fcfcff;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .avatar {
+  transform: scale(1.05);
+}
+
+.stars span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover .stars span {
+  animation: star-pulse 1.5s infinite alternate;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+.stars span:nth-child(1) {
+  --i: 0;
+}
+
+.stars span:nth-child(2) {
+  --i: 1;
+}
+
+.stars span:nth-child(3) {
+  --i: 2;
+}
+
+.stars span:nth-child(4) {
+  --i: 3;
+}
+
+.stars span:nth-child(5) {
+  --i: 4;
+}
+
+@keyframes star-pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-container {
+    gap: 1rem;
+  }
+  
+  .testimonial-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Carousel slide transition */
+.testimonials-container {
+  transition: transform 0.5s ease;
+}
+
+/* Navigation buttons */
+button.nav-button {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+button.nav-button:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+} 

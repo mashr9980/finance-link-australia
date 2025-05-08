@@ -1,0 +1,103 @@
+/* SimplePhilosophy Component Styles */
+
+.phone-shadow {
+  position: relative;
+}
+
+.phone-shadow::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+.phone-frame {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(3deg);
+  }
+}
+
+.piggy-icon {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  66% {
+    transform: rotate(5deg) scale(1.05);
+  }
+}
+
+.stats-illustration {
+  transform: translateY(0);
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* For tablets and below */
+@media (max-width: 1023px) {
+  .phone-frame {
+    transform-origin: center center;
+  }
+  
+  .stats-illustration {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .phone-shadow::before {
+    width: 50%;
+    bottom: -15px;
+  }
+  
+  .phone-frame {
+    transform: scale(0.9) rotate(3deg);
+  }
+  
+  @keyframes float {
+    0% {
+      transform: scale(0.9) translateY(0px) rotate(3deg);
+    }
+    50% {
+      transform: scale(0.9) translateY(-10px) rotate(1deg);
+    }
+    100% {
+      transform: scale(0.9) translateY(0px) rotate(3deg);
+    }
+  }
+} 

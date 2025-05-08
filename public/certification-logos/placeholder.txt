@@ -1,0 +1,7 @@
+This directory will store the certification logo images.
+
+Suggested logos:
+1. fbaa.png - Finance Brokers Association of Australia logo
+2. afca.png - Australian Financial Complaints Authority logo
+
+If actual logo images are not available, the component will automatically display fallback placeholders. 

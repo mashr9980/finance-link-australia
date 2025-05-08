@@ -1,0 +1,151 @@
+/* WhyLoveFloatMe Component Styles */
+
+.benefit-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon Shadow Effects */
+.benefit-icon-shadow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 10px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Icon Animations */
+.benefit-icon-pink, 
+.benefit-icon-yellow, 
+.benefit-icon-red, 
+.benefit-icon-gradient, 
+.benefit-icon-blue {
+  transition: all 0.3s ease;
+  transform-origin: center center;
+  animation: float 6s ease-in-out infinite;
+}
+
+.benefit-icon-pink {
+  animation-delay: 0s;
+}
+
+.benefit-icon-yellow {
+  animation-delay: 1s;
+}
+
+.benefit-icon-red {
+  animation-delay: 2s;
+}
+
+.benefit-icon-gradient {
+  animation-delay: 3s;
+}
+
+.benefit-icon-blue {
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Piggy Icon Animation */
+.piggy-icon {
+  animation: wiggle 4s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+}
+
+/* Red Heart Animation */
+.red-heart {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(0, -10px) scale(1.05);
+  }
+}
+.why-love-cards{
+  flex-direction: column !important;
+}
+.why-love-steps{
+  width: 100%;
+}
+.why-love-cards--parent{
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .benefit-icon-shadow {
+    width: 50%;
+    bottom: -8px;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(1deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+  
+  .red-heart {
+    transform: scale(0.8);
+  }
+}
+
+/* Make sure SVG text elements are visible */
+svg text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Ensure the component layout is clean on small devices */
+@media (max-width: 640px) {
+  .benefit-item {
+    margin-bottom: 1rem;
+  }
+  
+  .red-heart {
+    top: auto;
+    bottom: -50px;
+    right: -50px;
+    z-index: 10;
+  }
+} 

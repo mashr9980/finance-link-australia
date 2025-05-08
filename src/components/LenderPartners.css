@@ -1,0 +1,131 @@
+/* LenderPartners Component Styles */
+
+.lender-partners-section {
+  background-color: #a8a7aa;
+  background-image: linear-gradient(to right, #a7a7a7, #b8b8b8);
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Logo carousel styles */
+.partner-logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partner-logos-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.partner-logos {
+  display: flex;
+  animation: scrollLogos 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-logo-item {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 80px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.partner-logo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo-item img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* Grid layout for smaller screens */
+.partner-logos-grid {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .partner-logos-container {
+    display: none;
+  }
+  
+  .partner-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 20px;
+  }
+  
+  .partner-logo-grid-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+  }
+  
+  .partner-logo-grid-item img {
+    max-width: 100%;
+    max-height: 50px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .partner-logo-item {
+    width: 150px;
+    height: 70px;
+    margin: 0 8px;
+  }
+  
+  .partner-logo-item img {
+    max-height: 50px;
+  }
+}
+
+/* Pause animation on hover */
+.partner-logos-container:hover .partner-logos {
+  animation-play-state: paused;
+}
+
+/* Add a gradient overlay at the edges for a fading effect */
+.partner-logos-container::before,
+.partner-logos-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partner-logos-container::before {
+  left: 0;
+  background: linear-gradient(to right, #454346, transparent);
+}
+
+.partner-logos-container::after {
+  right: 0;
+  background: linear-gradient(to left, #454346, transparent);
+} 

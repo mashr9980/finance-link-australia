@@ -1,0 +1,49 @@
+/* FloatMeWay Component Styles */
+
+.float-piggy {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.process-card {
+  transition: all 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
+}
+
+/* Curved connector lines */
+.connector-line path {
+  transition: all 0.5s ease;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .process-steps {
+    position: relative;
+  }
+  
+  .process-steps::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.2), transparent);
+    z-index: -1;
+  }
+} 

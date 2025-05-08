@@ -1,0 +1,15 @@
+This directory will store the lender logo images.
+
+Suggested logos:
+1. suncorp.png
+2. grow.png
+3. flexi-commercial.png
+4. firstmac.png
+5. finance-one.png
+6. earlypay.png
+7. commonwealth.png
+8. capital-finance.png
+9. branded-financial.png
+10. boq.png
+
+If actual logo images are not available, the component will automatically display fallback placeholders. 

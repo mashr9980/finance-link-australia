@@ -1,0 +1,135 @@
+/* LoanDivisions Component Styles */
+
+.loan-tab {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.loan-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.loan-tab:hover::after {
+  width: 100%;
+}
+
+.loan-option {
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.loan-option:hover {
+  transform: translateY(-5px);
+}
+
+.loan-icon {
+  transition: all 0.3s ease;
+}
+
+.loan-option:hover .loan-icon {
+  transform: scale(1.1);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 640px) {
+  .loan-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-option {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .loan-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .loan-options-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Icon Animation */
+.icon-wobble {
+  animation: wobble 8s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+}
+
+/* Description fade-in animation */
+.loan-description {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active tab indicator animation */
+.tab-indicator {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.tab-indicator.business {
+  transform: translateX(100%);
+}
+
+/* Learn more button hover effect */
+.learn-more-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.learn-more-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 92, 246, 0.1);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.learn-more-btn:hover::after {
+  left: 0;
+} 
