@@ -1,3 +1,4 @@
+// src/components/DropDown.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -21,11 +22,11 @@ const ProductDropdown = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-gray-300 flex items-center focus:outline-none"
+        className="nav-item px-4 py-2 text-sm font-medium text-gray-300 hover:text-purple-400 flex items-center focus:outline-none transition-colors"
       >
         Our Services
         <svg
-          className="ml-1 h-4 w-4"
+          className={`ml-1 h-4 w-4 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -39,17 +40,17 @@ const ProductDropdown = () => {
       </button>
 
       {open && (
-        <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 py-2">
+        <div className="absolute left-0 mt-2 w-48 dark-card bg-dark-surface rounded-md shadow-lg z-50 py-2 backdrop-blur-md border border-purple-500/20 transform origin-top-right transition-all duration-200">
           <Link
             to="/personal-loans"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-600"
+            className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-900/20 hover:text-purple-400 transition-colors"
             onClick={() => setOpen(false)}
           >
             Personal Loans
           </Link>
           <Link
             to="/business-loans"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-600"
+            className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-900/20 hover:text-purple-400 transition-colors"
             onClick={() => setOpen(false)}
           >
             Business Loans

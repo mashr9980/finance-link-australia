@@ -1,3 +1,4 @@
+// src/components/Navbar.tsx
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -8,11 +9,35 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import ProductDropdown from "./DropDown";
 
-export function Navbar() {
+export function Logo() {
+  return (
+    <div className="flex items-center">
+      <div className="text-2xl font-bold gradient-text relative group">
+        FINANCE
+        <span className="relative mx-[-0.1rem] inline-block">
+          <svg width="24" height="24" viewBox="0 0 24 24" className="text-purple-400 transition-all duration-300 group-hover:text-purple-300 rotate-90 transform">
+            <path
+              fill="currentColor"
+              d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </span>
+        LINK
+      </div>
+    </div>
+  );
+}
+ export function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Function to check if viewport is mobile or tablet
@@ -24,7 +49,22 @@ export function Navbar() {
   useEffect(() => {
     checkViewport(); // Check on component mount
     window.addEventListener('resize', checkViewport);
-    return () => window.removeEventListener('resize', checkViewport);
+    
+    // Handle scroll for navbar background change
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('resize', checkViewport);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -49,13 +89,12 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-20 w-full  bg-white  shadow-md ">
-      <div className=" flex items-center justify-between px-10 bg-black">
+    <header className={`sticky top-0 z-20 w-full transition-all duration-300 ${scrolled ? 'bg-dark-surface bg-opacity-90 backdrop-blur-md shadow-lg' : 'bg-dark-bg'}`}>
+      <div className="flex items-center justify-between px-6 md:px-10">
         <Link
-          to="/" >
-          <div className="flex items-center py-6 ">
-            <Logo />
-          </div>
+          to="/"
+          className="flex items-center py-4">
+          <Logo />
         </Link>
 
         {/* Hamburger Menu Button (Mobile & Tablet) */}
@@ -64,9 +103,9 @@ export function Navbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-out ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-800 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-800 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-purple-400 transition-all duration-300 ease-out ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-purple-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-purple-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
 
         {/* Desktop Navigation (Large Screens) */}
@@ -76,7 +115,7 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link
                   to="/"
-                  className={`px-4 py-2 text-sm font-medium ${isActive('/about') ? 'text-white' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Home
                 </Link>
@@ -85,7 +124,7 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link
                   to="/about"
-                  className={`px-4 py-2 text-sm font-medium ${isActive('/about') ? 'text-white' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/about') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Who We Are
                 </Link>
@@ -93,7 +132,7 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link
                   to="/partners"
-                  className={`px-4 py-2 text-sm font-medium ${isActive('/partners') ? 'text-white' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/partners') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Partner With Us
                 </Link>
@@ -101,9 +140,16 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link
                   to="/legal"
-                  className={`px-4 py-2 text-sm font-medium ${isActive('/about') ? 'text-white' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/legal') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Legal
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="ml-4">
+                <Link to="/apply-now">
+                  <Button className="gradient-btn text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300">
+                    Apply Now
+                  </Button>
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -111,21 +157,21 @@ export function Navbar() {
         }
         {/* Mobile & Tablet Navigation Menu */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white shadow-lg lg:hidden z-30 py-4">
+          <div className="absolute top-full left-0 right-0 bg-dark-surface shadow-lg lg:hidden z-30 py-4 backdrop-blur-md border-t border-purple-900/30 transition-all duration-300 ease-in-out">
             <nav className="flex flex-col items-center">
               <Link
                 to="/"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/') ? 'text-black bg-gray-50' : 'text-gray-700 hover:text-gray-300 hover:bg-gray-50'}`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <div className="w-full">
                 <button
-                  className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/products') || location.pathname === '/personal-loans' || location.pathname === '/business-loans' ? 'text-black bg-gray-50' : 'text-gray-700 hover:text-gray-500 hover:bg-gray-50'} flex items-center justify-center`}
+                  className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/products') || location.pathname === '/personal-loans' || location.pathname === '/business-loans' ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} flex items-center justify-center transition-all duration-200`}
                   onClick={() => setActiveDropdown(activeDropdown === 'mobileProducts' ? null : 'mobileProducts')}
                 >
-                  Our Products
+                  Our Services
                   <svg
                     className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'mobileProducts' ? 'rotate-180' : ''}`}
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,12 +186,12 @@ export function Navbar() {
                   </svg>
                 </button>
                 {activeDropdown === 'mobileProducts' && (
-                  <div className="bg-gray-50 py-2">
+                  <div className="bg-dark-card py-2 transition-all duration-300 ease-in-out">
                     {productItems.map((item, index) => (
                       <Link
                         key={index}
                         to={item.link}
-                        className={`block px-8 py-2 text-sm ${isActive(item.link) ? 'text-black' : 'text-gray-700 hover:text-gray-500'}`}
+                        className={`block px-8 py-2 text-sm ${isActive(item.link) ? 'text-purple-400' : 'text-gray-300 hover:text-purple-400'} transition-all duration-200`}
                         onClick={toggleMenu}
                       >
                         {item.name}
@@ -156,30 +202,30 @@ export function Navbar() {
               </div>
               <Link
                 to="/about"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/about') ? 'text-black bg-gray-50' : 'text-gray-700 hover:text-gray-500 hover:bg-gray-50'}`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/about') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Who We Are
               </Link>
               <Link
                 to="/partners"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/partners') ? 'text-black bg-gray-50' : 'text-gray-700 hover:text-gray-500 hover:bg-gray-50'}`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/partners') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Partner With Us
               </Link>
               <Link
                 to="/legal"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/legal') ? 'text-black bg-gray-50' : 'text-gray-700 hover:text-gray-500 hover:bg-gray-50'}`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/legal') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Legal
               </Link>
               <div className="mt-4 w-full px-4">
-                <Link to="/apply-now">
-                <Button className="w-full rounded-full bg-gray-400 px-6 py-2 text-white hover:bg-gray-600">
-                  Apply Now
-                </Button>
+                <Link to="/apply-now" onClick={toggleMenu}>
+                  <Button className="w-full gradient-btn py-2 text-white rounded-full hover:shadow-lg transition-all duration-300">
+                    Apply Now
+                  </Button>
                 </Link>
               </div>
             </nav>
@@ -191,11 +237,4 @@ export function Navbar() {
   );
 }
 
-export function Logo() {
-  return (
-    <div className="flex items-center text-2xl font-bold">
-      {/* FINANCE<span className="relative mx-[-0.1rem] text-violet-500">🔗</span>LINK */}
-      <img src="/src/components/assets/finance-link-logo.png" style={{ width: "40%" }} />
-    </div>
-  );
-}
+// export
