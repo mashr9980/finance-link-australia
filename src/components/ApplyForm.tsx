@@ -72,10 +72,10 @@ export function ApplyForm() {
     <section ref={containerRef} className="relative py-24 overflow-hidden bg-dark-bg">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-purple-900/5 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-purple-900/5 to-transparent"></div>
-        <div className="absolute top-20 right-20 w-80 h-80 bg-purple-800/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-600/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-teal-900/5 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-teal-900/5 to-transparent"></div>
+        <div className="absolute top-20 right-20 w-80 h-80 bg-teal-800/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-teal-600/10 rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -93,7 +93,7 @@ export function ApplyForm() {
                 way to submitting your finance application with Finance Link Australia.
               </p>
 
-              <p className="text-lg font-medium mb-8 text-purple-300">
+              <p className="text-lg font-medium mb-8 text-teal-300">
                 Let us help build the custom solution for you!
               </p>
 
@@ -129,7 +129,7 @@ export function ApplyForm() {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     placeholder="First Name"
-                    className="w-full p-3 bg-dark-surface rounded-md border border-purple-500/30 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white transition-all"
+                    className="w-full p-3 bg-dark-surface rounded-md border border-teal-500/30 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 text-white transition-all"
                     required
                   />
                 </div>
@@ -143,7 +143,7 @@ export function ApplyForm() {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     placeholder="Last Name"
-                    className="w-full p-3 bg-dark-surface rounded-md border border-purple-500/30 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white transition-all"
+                    className="w-full p-3 bg-dark-surface rounded-md border border-teal-500/30 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 text-white transition-all"
                     required
                   />
                 </div>
@@ -157,7 +157,7 @@ export function ApplyForm() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="Phone"
-                    className="w-full p-3 bg-dark-surface rounded-md border border-purple-500/30 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white transition-all"
+                    className="w-full p-3 bg-dark-surface rounded-md border border-teal-500/30 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 text-white transition-all"
                     required
                   />
                 </div>
@@ -171,7 +171,7 @@ export function ApplyForm() {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Email"
-                    className="w-full p-3 bg-dark-surface rounded-md border border-purple-500/30 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white transition-all"
+                    className="w-full p-3 bg-dark-surface rounded-md border border-teal-500/30 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 text-white transition-all"
                     required
                   />
                 </div>
@@ -186,7 +186,7 @@ export function ApplyForm() {
                     name="loanAmount"
                     value={formData.loanAmount}
                     onChange={handleInputChange}
-                    className="w-full p-3 bg-dark-surface rounded-md border border-purple-500/30 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white transition-all"
+                    className="w-full p-3 bg-dark-surface rounded-md border border-teal-500/30 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 text-white transition-all"
                     aria-labelledby="loanAmountLabel"
                     required
                   />
@@ -197,7 +197,7 @@ export function ApplyForm() {
                   className="gradient-btn w-full py-4 text-white rounded-md font-medium relative overflow-hidden group"
                 >
                   <span className="relative z-10">Get your quote</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </button>
               </form>
               

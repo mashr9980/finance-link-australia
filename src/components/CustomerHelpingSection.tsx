@@ -26,9 +26,9 @@ export function CustomerHelpingSection() {
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-purple-900/10 to-transparent"></div>
-        <div className="absolute top-1/4 right-10 w-64 h-64 bg-purple-700/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-10 w-64 h-64 bg-purple-900/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-teal-900/10 to-transparent"></div>
+        <div className="absolute top-1/4 right-10 w-64 h-64 bg-teal-700/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-10 w-64 h-64 bg-teal-900/10 rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
@@ -51,7 +51,7 @@ export function CustomerHelpingSection() {
               <div className="dark-card rounded-lg p-6 w-full flex flex-col items-center">
                 <div className="relative mb-4">
                   {/* Animated circle behind the number */}
-                  <div className="absolute inset-0 bg-purple-900/20 rounded-full filter blur-md animate-pulse"></div>
+                  <div className="absolute inset-0 bg-teal-900/20 rounded-full filter blur-md animate-pulse"></div>
                   <div className="relative z-10">
                     {isAnimated && <AnimatedNumber target={stat.value} suffix={stat.suffix} duration={2} />}
                   </div>

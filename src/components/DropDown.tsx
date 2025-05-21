@@ -22,7 +22,7 @@ const ProductDropdown = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="nav-item px-4 py-2 text-sm font-medium text-gray-300 hover:text-purple-400 flex items-center focus:outline-none transition-colors"
+        className="nav-item px-4 py-2 text-sm font-medium text-gray-300 hover:text-teal-400 flex items-center focus:outline-none transition-colors"
       >
         Our Services
         <svg
@@ -40,17 +40,17 @@ const ProductDropdown = () => {
       </button>
 
       {open && (
-        <div className="absolute left-0 mt-2 w-48 dark-card bg-dark-surface rounded-md shadow-lg z-50 py-2 backdrop-blur-md border border-purple-500/20 transform origin-top-right transition-all duration-200">
+        <div className="absolute left-0 mt-2 w-48 dark-card bg-dark-surface rounded-md shadow-lg z-50 py-2 backdrop-blur-md border border-teal-500/20 transform origin-top-right transition-all duration-200">
           <Link
             to="/personal-loans"
-            className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-900/20 hover:text-purple-400 transition-colors"
+            className="block px-4 py-2 text-sm text-gray-300 hover:bg-teal-900/20 hover:text-teal-400 transition-colors"
             onClick={() => setOpen(false)}
           >
             Personal Loans
           </Link>
           <Link
             to="/business-loans"
-            className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-900/20 hover:text-purple-400 transition-colors"
+            className="block px-4 py-2 text-sm text-gray-300 hover:bg-teal-900/20 hover:text-teal-400 transition-colors"
             onClick={() => setOpen(false)}
           >
             Business Loans

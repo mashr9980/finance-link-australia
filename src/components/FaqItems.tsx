@@ -54,8 +54,8 @@ export function FAQSection() {
             {/* Background elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-                <div className="absolute top-20 left-20 w-64 h-64 bg-purple-800/10 rounded-full filter blur-3xl"></div>
-                <div className="absolute bottom-20 right-20 w-64 h-64 bg-purple-600/10 rounded-full filter blur-3xl"></div>
+                <div className="absolute top-20 left-20 w-64 h-64 bg-teal-800/10 rounded-full filter blur-3xl"></div>
+                <div className="absolute bottom-20 right-20 w-64 h-64 bg-teal-600/10 rounded-full filter blur-3xl"></div>
             </div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -65,11 +65,11 @@ export function FAQSection() {
                         <div className="phone-shadow relative mx-auto max-w-xs md:max-w-sm">
                             <div className="phone-frame relative z-10 rotate-3 transform transition-transform duration-500 hover:rotate-0 floating">
                                 <img src={faq} alt="Phone with FAQ" className="w-full h-full rounded-xl shadow-lg" />
-                                {/* Purple glow */}
-                                <div className="absolute -inset-0.5 bg-purple-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                {/* teal glow */}
+                                <div className="absolute -inset-0.5 bg-teal-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
-                            {/* Purple glow under the phone */}
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-purple-600/20 filter blur-xl rounded-full"></div>
+                            {/* teal glow under the phone */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-teal-600/20 filter blur-xl rounded-full"></div>
                         </div>
                     </div>
 
@@ -84,15 +84,15 @@ export function FAQSection() {
                                 <Accordion.Item
                                     key={index}
                                     value={`item-${index}`}
-                                    className={`dark-card rounded-xl overflow-hidden transition-all duration-300 ${openItems.includes(`item-${index}`) ? 'border border-purple-500/40' : 'border border-purple-500/20'}`}
+                                    className={`dark-card rounded-xl overflow-hidden transition-all duration-300 ${openItems.includes(`item-${index}`) ? 'border border-teal-500/40' : 'border border-teal-500/20'}`}
                                 >
                                     <Accordion.Header>
                                         <Accordion.Trigger 
-                                            className="group flex w-full items-center justify-between py-5 px-6 text-left text-lg font-medium text-white transition-all hover:text-purple-400"
+                                            className="group flex w-full items-center justify-between py-5 px-6 text-left text-lg font-medium text-white transition-all hover:text-teal-400"
                                             onClick={() => toggleItem(`item-${index}`)}
                                         >
                                             {item.question}
-                                            <ChevronDown className={`ml-2 h-5 w-5 text-purple-400 transition-transform duration-300 ${openItems.includes(`item-${index}`) ? 'rotate-180' : ''}`} />
+                                            <ChevronDown className={`ml-2 h-5 w-5 text-teal-400 transition-transform duration-300 ${openItems.includes(`item-${index}`) ? 'rotate-180' : ''}`} />
                                         </Accordion.Trigger>
                                     </Accordion.Header>
                                     <AnimatePresence>

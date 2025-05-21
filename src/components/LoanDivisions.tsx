@@ -35,12 +35,12 @@ export function LoanDivisions() {
     <section ref={containerRef} className="relative py-20 overflow-hidden">
       {/* Dark background with gradient overlay */}
       <div className="absolute inset-0 bg-dark-bg">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-dark-bg"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 to-dark-bg"></div>
       </div>
       
       {/* Animated blurred circles */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-purple-600/5 rounded-full filter blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-64 h-64 bg-purple-800/5 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-64 h-64 bg-teal-600/5 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-64 h-64 bg-teal-800/5 rounded-full filter blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="mb-8 text-center text-3xl font-bold md:mb-12 md:text-4xl text-white">
@@ -48,7 +48,7 @@ export function LoanDivisions() {
         </h2>
 
         {/* Tabs */}
-        <div className="relative mx-auto mb-10 flex max-w-md overflow-hidden rounded-full p-1 bg-dark-surface border border-purple-900/30">
+        <div className="relative mx-auto mb-10 flex max-w-md overflow-hidden rounded-full p-1 bg-dark-surface border border-teal-900/30">
           <button
             className={`loan-tab flex-1 px-6 py-3 text-center font-medium transition-all duration-300 rounded-full ${activeTab === "personal" ? "gradient-btn text-white" : "text-gray-300"}`}
             onClick={() => handleTabChange("personal")}
@@ -73,7 +73,7 @@ export function LoanDivisions() {
               className="loan-option dark-card flex flex-col items-center p-8 rounded-xl transform transition-all duration-500"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="loan-icon mb-6 h-20 w-20 p-4 rounded-full bg-purple-900/20 border border-purple-500/20 flex items-center justify-center">
+              <div className="loan-icon mb-6 h-20 w-20 p-4 rounded-full bg-teal-900/20 border border-teal-500/20 flex items-center justify-center">
                 <img src={option.icon} alt={`${option.title} icon`} className="h-full w-full object-contain" style={{filter: "invert(1) brightness(0.8) sepia(1) hue-rotate(230deg) saturate(4)"}} />
               </div>
               <h3 className="mb-3 text-center text-xl font-semibold text-white">{option.title}</h3>
@@ -82,7 +82,7 @@ export function LoanDivisions() {
               </p>
               <Link
                 to={`/${activeTab === "personal" ? "personal" : "business"}-loans/${option.id}`}
-                className="mt-auto inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-medium bg-dark-surface text-purple-300 border border-purple-500/30 hover:bg-purple-900/20 hover:border-purple-500/50 transition-all"
+                className="mt-auto inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-medium bg-dark-surface text-teal-300 border border-teal-500/30 hover:bg-teal-900/20 hover:border-teal-500/50 transition-all"
               >
                 Learn More
                 <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">

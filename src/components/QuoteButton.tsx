@@ -33,7 +33,7 @@ export function QuoteButton() {
       <div className="relative">
         {/* Animated glow effect */}
         <div 
-          className={`absolute inset-0 rounded-l-lg bg-purple-600/30 blur-lg transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 rounded-l-lg bg-teal-600/30 blur-lg transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
         ></div>
         
         <Link to="/apply-now">

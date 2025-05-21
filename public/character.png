@@ -2,7 +2,7 @@ This file needs to be a 3D character image.
 
 Please add a PNG image of a 3D character to this location (public/character.png).
 
-The image should show a 3D character in a purple outfit (like the one in the reference image)
+The image should show a 3D character in a teal outfit (like the one in the reference image)
 with arms up/raised in a celebratory pose.
 
 If you don't have such an image, the component has a fallback SVG that will

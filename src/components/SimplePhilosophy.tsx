@@ -21,8 +21,8 @@ export function SimplePhilosophy() {
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50"></div>
-        <div className="absolute top-20 left-20 w-64 h-64 bg-purple-800/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-purple-600/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 bg-teal-800/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-teal-600/10 rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -34,8 +34,8 @@ export function SimplePhilosophy() {
               <div className="phone-frame relative z-10 rotate-3 transform transition-transform duration-500 hover:rotate-0 floating">
                 <img src={PhoneWIthTick} alt="Phone with Tick" className="w-full h-full rounded-xl shadow-lg" />
               </div>
-              {/* Purple glow under the phone */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-purple-600/20 filter blur-xl rounded-full"></div>
+              {/* teal glow under the phone */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-teal-600/20 filter blur-xl rounded-full"></div>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export function SimplePhilosophy() {
               <h2 className="mb-2 text-3xl font-bold md:text-4xl text-white">
                 At <span className="inline-flex items-center">
                   <span className="gradient-text">Finance</span>
-                  <span className="inline-block mx-1 text-purple-400 transition-all duration-300 rotate-90 transform">
+                  <span className="inline-block mx-1 text-teal-400 transition-all duration-300 rotate-90 transform">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>

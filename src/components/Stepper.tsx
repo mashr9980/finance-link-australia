@@ -49,12 +49,12 @@ export function Stepper() {
     return (
         <div ref={containerRef} className="relative py-24 overflow-hidden">
             {/* Animated background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-purple-900/30 to-dark-bg z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-teal-900/30 to-dark-bg z-0"></div>
             
             {/* Floating shapes */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div className="absolute -top-12 left-1/4 w-48 h-48 bg-purple-800/10 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 right-1/4 w-56 h-56 bg-purple-600/10 rounded-full blur-3xl"></div>
+                <div className="absolute -top-12 left-1/4 w-48 h-48 bg-teal-800/10 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 right-1/4 w-56 h-56 bg-teal-600/10 rounded-full blur-3xl"></div>
             </div>
             
             <div className="container mx-auto px-4 relative z-10">
@@ -68,7 +68,7 @@ export function Stepper() {
                 {/* Steps container */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
                     {/* Connection line (desktop only) */}
-                    <div className="hidden md:block absolute top-28 left-0 w-full h-0.5 bg-gradient-to-r from-purple-900/20 via-purple-600/40 to-purple-900/20"></div>
+                    <div className="hidden md:block absolute top-28 left-0 w-full h-0.5 bg-gradient-to-r from-teal-900/20 via-teal-600/40 to-teal-900/20"></div>
                     
                     {/* Steps */}
                     {steps.map((step, index) => (
@@ -78,14 +78,14 @@ export function Stepper() {
                             style={{ transitionDelay: `${index * 200}ms` }}
                         >
                             {/* Step number badge */}
-                            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-16 h-16 flex items-center justify-center bg-dark-surface border-4 border-purple-800 rounded-full shadow-lg z-20">
+                            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-16 h-16 flex items-center justify-center bg-dark-surface border-4 border-teal-800 rounded-full shadow-lg z-20">
                                 <span className="text-3xl font-bold gradient-text">{step.number}</span>
                             </div>
                             
                             {/* Card content */}
                             <div className="pt-12 pb-8 px-6 dark-card rounded-xl text-center">
                                 <div className="mb-4 flex justify-center">
-                                    <div className="p-3 bg-purple-900/20 text-purple-400 rounded-full">
+                                    <div className="p-3 bg-teal-900/20 text-teal-400 rounded-full">
                                         {step.icon}
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ export function Stepper() {
                             {/* Arrow connector (desktop only) */}
                             {index < steps.length - 1 && (
                                 <div className="hidden md:block absolute top-28 -right-6 transform -translate-y-1/2 z-10">
-                                    <svg className="w-12 h-12 text-purple-500/80" viewBox="0 0 24 24" fill="none">
+                                    <svg className="w-12 h-12 text-teal-500/80" viewBox="0 0 24 24" fill="none">
                                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </div>
@@ -106,7 +106,7 @@ export function Stepper() {
                 </div>
 
                 <div className={`relative z-20 mt-12 flex justify-center transition-all duration-700 delay-700 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                    <div className="backdrop-blur-md bg-dark-surface/60 border border-purple-500/20 rounded-2xl shadow-xl py-6 px-8 text-center transform hover:scale-105 transition-transform">
+                    <div className="backdrop-blur-md bg-dark-surface/60 border border-teal-500/20 rounded-2xl shadow-xl py-6 px-8 text-center transform hover:scale-105 transition-transform">
                         <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold gradient-text">
                             Surprisingly easy, right?
                         </h3>

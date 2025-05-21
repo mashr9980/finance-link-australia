@@ -106,8 +106,8 @@ export function RepaymentCalculator() {
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-        <div className="absolute top-20 left-20 w-96 h-96 bg-purple-800/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-600/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-teal-800/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-600/10 rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -117,14 +117,14 @@ export function RepaymentCalculator() {
               Repayment<br />
               <span className="gradient-text">Calculator</span>
             </h2>
-            <p className="text-lg mb-4 text-purple-300">Why does it feel like we're always hustling?</p>
+            <p className="text-lg mb-4 text-teal-300">Why does it feel like we're always hustling?</p>
             <p className="text-lg mb-6 text-gray-300">
               We work hard to provide you with great loans 
               and support, but now there's one more thing.
             </p>
             <p className="text-lg mb-6 text-gray-300">
               A loan repayment calculator that will help you 
-              work out <span className="text-purple-300 font-medium">how your payments will fit</span> into your 
+              work out <span className="text-teal-300 font-medium">how your payments will fit</span> into your 
               monthly expenses!
             </p>
             
@@ -140,7 +140,7 @@ export function RepaymentCalculator() {
           </div>
 
           <div className={`calculator-form transition-all duration-700 delay-200 ${isAnimated ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="dark-card rounded-2xl shadow-2xl backdrop-blur-sm p-8 border border-purple-500/20">
+            <div className="dark-card rounded-2xl shadow-2xl backdrop-blur-sm p-8 border border-teal-500/20">
               <div className="calculator-header mb-8">
                 <h3 className="text-xl md:text-2xl text-white font-medium mb-2">
                   Get an estimate of<br />
@@ -160,11 +160,11 @@ export function RepaymentCalculator() {
                   Enter your desired loan amount
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-400">$</span>
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-teal-400">$</span>
                   <input
                     type="text"
                     id="loanAmount"
-                    className="form-input pl-8 pr-4 py-3 w-full bg-dark-surface border border-purple-500/30 text-white rounded-md focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+                    className="form-input pl-8 pr-4 py-3 w-full bg-dark-surface border border-teal-500/30 text-white rounded-md focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
                     value={loanAmountInput}
                     onChange={handleLoanAmountChange}
                     onBlur={handleAmountBlur}
@@ -175,14 +175,14 @@ export function RepaymentCalculator() {
               <div className="form-group mb-6">
                 <label className="block text-sm font-medium mb-2 text-gray-300">
                   Choose a repayment period
-                  <span className="inline-block ml-1 bg-purple-900 rounded-full w-4 h-4 text-white text-xs flex items-center justify-center">?</span>
+                  <span className="inline-block ml-1 bg-teal-900 rounded-full w-4 h-4 text-white text-xs flex items-center justify-center">?</span>
                 </label>
                 <div className="term-selector flex space-x-1 md:space-x-2">
                   {[1, 2, 3, 4, 5, 6, 7].map((term) => (
                     <button
                       key={term}
                       className={`term-btn flex-1 py-2 text-sm md:text-base rounded-full ${
-                        loanTerm === term ? 'gradient-btn text-white' : 'bg-dark-surface text-gray-300 border border-purple-500/30'
+                        loanTerm === term ? 'gradient-btn text-white' : 'bg-dark-surface text-gray-300 border border-teal-500/30'
                       } transition-all`}
                       onClick={() => handleLoanTermChange(term)}
                     >
@@ -205,11 +205,11 @@ export function RepaymentCalculator() {
                     step="0.1"
                     value={interestRate}
                     onChange={handleInterestRateChange}
-                    className="w-full h-2 bg-purple-900/30 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-2 bg-teal-900/30 rounded-lg appearance-none cursor-pointer"
                   />
                   <div className="flex justify-between text-xs text-gray-400 mt-1">
                     <span>1%</span>
-                    <span className="text-purple-400">{interestRate.toFixed(1)}%</span>
+                    <span className="text-teal-400">{interestRate.toFixed(1)}%</span>
                     <span>15%</span>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export function RepaymentCalculator() {
                 <div className="relative">
                   <select
                     id="frequency"
-                    className="form-select pl-4 pr-10 py-3 w-full bg-dark-surface border border-purple-500/30 text-white rounded-md focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 appearance-none"
+                    className="form-select pl-4 pr-10 py-3 w-full bg-dark-surface border border-teal-500/30 text-white rounded-md focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 appearance-none"
                     value={repaymentFrequency}
                     onChange={(e) => setRepaymentFrequency(e.target.value)}
                   >
@@ -230,7 +230,7 @@ export function RepaymentCalculator() {
                     <option value="Fortnightly">Fortnightly</option>
                     <option value="Weekly">Weekly</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-purple-400">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-teal-400">
                     <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
@@ -238,7 +238,7 @@ export function RepaymentCalculator() {
                 </div>
               </div>
 
-              <div className="result-section border-t border-purple-500/30 pt-6">
+              <div className="result-section border-t border-teal-500/30 pt-6">
                 <div className="text-lg font-medium text-gray-300 mb-2">Repayment</div>
                 <div className="repayment-amount text-4xl font-bold gradient-text mb-6">
                   $ {monthlyRepayment.toFixed(2)}

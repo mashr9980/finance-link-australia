@@ -34,7 +34,7 @@ export function WhyProcess() {
             </div>
 
             <div className="text-content">
-              <p className="mb-5 text-purple-600 font-medium">We know that life can be tough.</p>
+              <p className="mb-5 text-teal-600 font-medium">We know that life can be tough.</p>
               
               <p className="mb-5">
                 It's not easy, especially in this day and age when everyone wants 
@@ -51,11 +51,11 @@ export function WhyProcess() {
                 and most importantly:
               </p>
               
-              <p className="mb-5 text-purple-600 font-medium">
+              <p className="mb-5 text-teal-600 font-medium">
                 Provide financing solutions tailored specifically towards YOUR needs.
               </p>
               
-              <p className="text-purple-600 font-medium text-lg">
+              <p className="text-teal-600 font-medium text-lg">
                 We know you will love us!
               </p>
             </div>

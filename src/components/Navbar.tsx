@@ -15,7 +15,7 @@ export function Logo() {
       <div className="text-2xl font-bold gradient-text relative group">
         FINANCE
         <span className="relative mx-[-0.1rem] inline-block">
-          <svg width="24" height="24" viewBox="0 0 24 24" className="text-purple-400 transition-all duration-300 group-hover:text-purple-300 rotate-90 transform">
+          <svg width="24" height="24" viewBox="0 0 24 24" className="text-teal-400 transition-all duration-300 group-hover:text-teal-300 rotate-90 transform">
             <path
               fill="currentColor"
               d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15"
@@ -25,7 +25,7 @@ export function Logo() {
               strokeLinejoin="round"
             />
           </svg>
-          <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute -inset-1 rounded-full bg-teal-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </span>
         LINK
       </div>
@@ -103,9 +103,9 @@ export function Logo() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-purple-400 transition-all duration-300 ease-out ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-purple-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-purple-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-teal-400 transition-all duration-300 ease-out ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-teal-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-teal-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
 
         {/* Desktop Navigation (Large Screens) */}
@@ -115,7 +115,7 @@ export function Logo() {
               <NavigationMenuItem>
                 <Link
                   to="/"
-                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/') ? 'active text-teal-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Home
                 </Link>
@@ -124,7 +124,7 @@ export function Logo() {
               <NavigationMenuItem>
                 <Link
                   to="/about"
-                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/about') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/about') ? 'active text-teal-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Who We Are
                 </Link>
@@ -132,7 +132,7 @@ export function Logo() {
               <NavigationMenuItem>
                 <Link
                   to="/partners"
-                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/partners') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/partners') ? 'active text-teal-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Partner With Us
                 </Link>
@@ -140,7 +140,7 @@ export function Logo() {
               <NavigationMenuItem>
                 <Link
                   to="/legal"
-                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/legal') ? 'active text-purple-400' : 'text-gray-300 hover:text-gray-300'}`}
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/legal') ? 'active text-teal-400' : 'text-gray-300 hover:text-gray-300'}`}
                 >
                   Legal
                 </Link>
@@ -157,18 +157,18 @@ export function Logo() {
         }
         {/* Mobile & Tablet Navigation Menu */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-dark-surface shadow-lg lg:hidden z-30 py-4 backdrop-blur-md border-t border-purple-900/30 transition-all duration-300 ease-in-out">
+          <div className="absolute top-full left-0 right-0 bg-dark-surface shadow-lg lg:hidden z-30 py-4 backdrop-blur-md border-t border-teal-900/30 transition-all duration-300 ease-in-out">
             <nav className="flex flex-col items-center">
               <Link
                 to="/"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <div className="w-full">
                 <button
-                  className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/products') || location.pathname === '/personal-loans' || location.pathname === '/business-loans' ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} flex items-center justify-center transition-all duration-200`}
+                  className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/products') || location.pathname === '/personal-loans' || location.pathname === '/business-loans' ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} flex items-center justify-center transition-all duration-200`}
                   onClick={() => setActiveDropdown(activeDropdown === 'mobileProducts' ? null : 'mobileProducts')}
                 >
                   Our Services
@@ -191,7 +191,7 @@ export function Logo() {
                       <Link
                         key={index}
                         to={item.link}
-                        className={`block px-8 py-2 text-sm ${isActive(item.link) ? 'text-purple-400' : 'text-gray-300 hover:text-purple-400'} transition-all duration-200`}
+                        className={`block px-8 py-2 text-sm ${isActive(item.link) ? 'text-teal-400' : 'text-gray-300 hover:text-teal-400'} transition-all duration-200`}
                         onClick={toggleMenu}
                       >
                         {item.name}
@@ -202,21 +202,21 @@ export function Logo() {
               </div>
               <Link
                 to="/about"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/about') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/about') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Who We Are
               </Link>
               <Link
                 to="/partners"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/partners') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/partners') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Partner With Us
               </Link>
               <Link
                 to="/legal"
-                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/legal') ? 'bg-purple-900/20 text-purple-400' : 'text-gray-300 hover:text-purple-400 hover:bg-purple-900/10'} transition-all duration-200`}
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/legal') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
               >
                 Legal

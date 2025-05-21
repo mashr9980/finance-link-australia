@@ -46,12 +46,12 @@ export function LenderPartners() {
   };
 
   return (
-    <section ref={containerRef} className="relative py-16 md:py-20 bg-gradient-to-br from-dark-bg to-purple-900/30 overflow-hidden">
+    <section ref={containerRef} className="relative py-16 md:py-20 bg-gradient-to-br from-dark-bg to-teal-900/30 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-dark-bg opacity-60"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wOCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-purple-900/20 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-teal-900/20 to-transparent"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -73,7 +73,7 @@ export function LenderPartners() {
               {lenders.map((lender, index) => (
                 <div 
                   key={`lender-1-${index}`} 
-                  className="partner-logo-item flex items-center justify-center mx-4 dark-card p-4 rounded-lg shadow-sm border border-purple-500/20 backdrop-filter backdrop-blur-sm hover:border-purple-500/40 transition-all"
+                  className="partner-logo-item flex items-center justify-center mx-4 dark-card p-4 rounded-lg shadow-sm border border-teal-500/20 backdrop-filter backdrop-blur-sm hover:border-teal-500/40 transition-all"
                 >
                   <img 
                     src={lender.logo} 
@@ -88,7 +88,7 @@ export function LenderPartners() {
               {lenders.map((lender, index) => (
                 <div 
                   key={`lender-2-${index}`} 
-                  className="partner-logo-item flex items-center justify-center mx-4 dark-card p-4 rounded-lg shadow-sm border border-purple-500/20 backdrop-filter backdrop-blur-sm hover:border-purple-500/40 transition-all"
+                  className="partner-logo-item flex items-center justify-center mx-4 dark-card p-4 rounded-lg shadow-sm border border-teal-500/20 backdrop-filter backdrop-blur-sm hover:border-teal-500/40 transition-all"
                 >
                   <img 
                     src={lender.logo} 
@@ -107,7 +107,7 @@ export function LenderPartners() {
           {lenders.slice(0, 6).map((lender, index) => (
             <div 
               key={`lender-grid-${index}`} 
-              className="partner-logo-grid-item flex items-center justify-center dark-card p-4 rounded-lg shadow-sm border border-purple-500/20 backdrop-filter backdrop-blur-sm"
+              className="partner-logo-grid-item flex items-center justify-center dark-card p-4 rounded-lg shadow-sm border border-teal-500/20 backdrop-filter backdrop-blur-sm"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <img 

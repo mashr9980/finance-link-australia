@@ -21,9 +21,9 @@ export function WhoAreWe() {
             {/* Background elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-purple-900/10 to-transparent"></div>
-                <div className="absolute top-20 right-20 w-80 h-80 bg-purple-800/10 rounded-full filter blur-3xl"></div>
-                <div className="absolute bottom-40 left-20 w-72 h-72 bg-purple-700/10 rounded-full filter blur-3xl"></div>
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-teal-900/10 to-transparent"></div>
+                <div className="absolute top-20 right-20 w-80 h-80 bg-teal-800/10 rounded-full filter blur-3xl"></div>
+                <div className="absolute bottom-40 left-20 w-72 h-72 bg-teal-700/10 rounded-full filter blur-3xl"></div>
             </div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -35,16 +35,16 @@ export function WhoAreWe() {
                             <div className="phone-frame relative z-10 rotate-3 transform transition-transform duration-500 hover:rotate-0 floating">
                                 <img src={image1} alt="Team at work" className="w-full h-full rounded-xl shadow-lg" />
                             </div>
-                            {/* Purple glow under the phone */}
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-purple-600/20 filter blur-xl rounded-full"></div>
+                            {/* teal glow under the phone */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-teal-600/20 filter blur-xl rounded-full"></div>
                         </div>
                     </div>
 
                     {/* Right Column - Text Content */}
                     <div className={`w-full lg:w-1/2 transition-all duration-700 delay-200 ${isAnimated ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                         <div className="text-content">
-                            <div className="inline-block px-4 py-1 mb-4 bg-purple-900/20 border border-purple-500/20 rounded-full">
-                                <h3 className="text-sm md:text-base font-semibold text-purple-400">About Us</h3>
+                            <div className="inline-block px-4 py-1 mb-4 bg-teal-900/20 border border-teal-500/20 rounded-full">
+                                <h3 className="text-sm md:text-base font-semibold text-teal-400">About Us</h3>
                             </div>
 
                             <h2 className="mb-2 text-3xl font-bold md:text-4xl text-white">
@@ -58,7 +58,7 @@ export function WhoAreWe() {
 
                             <div className="space-y-6 text-gray-300">
                                 <p>
-                                    Finance<span className="inline-block mx-1 text-purple-400 rotate-90">
+                                    Finance<span className="inline-block mx-1 text-teal-400 rotate-90">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                             <path d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
@@ -68,7 +68,7 @@ export function WhoAreWe() {
                                 <p>
                                     For too long, the industry has struggled to connect people with lenders who truly meet their needs—especially when speed matters.
 
-                                    At Finance<span className="inline-block mx-1 text-purple-400 rotate-90">
+                                    At Finance<span className="inline-block mx-1 text-teal-400 rotate-90">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                             <path d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
@@ -82,7 +82,7 @@ export function WhoAreWe() {
                                         </button>
                                     </Link>
                                     <Link to="/partners">
-                                        <button className="bg-transparent hover:bg-purple-900/20 text-white font-medium px-6 py-3 border border-purple-500/40 rounded-full transition-all hover:border-purple-500/60">
+                                        <button className="bg-transparent hover:bg-teal-900/20 text-white font-medium px-6 py-3 border border-teal-500/40 rounded-full transition-all hover:border-teal-500/60">
                                             Partner With Us
                                         </button>
                                     </Link>

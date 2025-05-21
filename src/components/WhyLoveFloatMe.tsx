@@ -20,8 +20,8 @@ export function WhyLoveFloatMe() {
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjVDRjYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bS0zMiA0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMTYgNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-purple-900/10 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-teal-900/10 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-teal-900/10 to-transparent"></div>
       </div>
 
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between relative z-10">
@@ -46,16 +46,16 @@ export function WhyLoveFloatMe() {
             >
               <div className="dark-card rounded-xl p-6 relative overflow-hidden group hover:scale-[1.03] transition-all duration-300">
                 {/* Background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="why-love-cards flex flex-row items-start relative">
                   <div className="why-love-steps flex flex-col items-center justify-center mr-5">
-                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-purple-900 text-white border-4 border-dark-bg text-xl font-semibold glow">
+                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-teal-900 text-white border-4 border-dark-bg text-xl font-semibold glow">
                       {step.number}
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="text-lg leading-6 font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">{step.title}</h4>
+                    <h4 className="text-lg leading-6 font-semibold text-white mb-2 group-hover:text-teal-300 transition-colors">{step.title}</h4>
                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{step.desc}</p>
                   </div>
                 </div>
