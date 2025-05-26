@@ -2,16 +2,58 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from "framer-motion";
 import './LenderPartners.css';
-import lender1 from "./assets/lender/lender1.png";
-import lender2 from "./assets/lender/lender2.png";
-import lender3 from "./assets/lender/lender3.png";
-import lender4 from "./assets/lender/lender4.png";
-import lender5 from "./assets/lender/lender5.jpg";
-import lender6 from "./assets/lender/lender6.png";
-import lender7 from "./assets/lender/lender7.png";
-import lender8 from "./assets/lender/lender8.jpg";
-import lender9 from "./assets/lender/lender9.jpg";
-import lender10 from "./assets/lender/lender10.png";
+import lender1 from "./assets/lender/1.jpeg";
+import lender2 from "./assets/lender/2.jpg";
+import lender3 from "./assets/lender/3.png";
+import lender4 from "./assets/lender/4.jpeg";
+import lender5 from "./assets/lender/5.jpg";
+import lender6 from "./assets/lender/6.png";
+import lender7 from "./assets/lender/7.jpg";
+import lender8 from "./assets/lender/8.png";
+import lender9 from "./assets/lender/9.jpg";
+import lender10 from "./assets/lender/10.png";
+import lender11 from "./assets/lender/11.jpg";
+import lender12 from "./assets/lender/12.png";
+import lender13 from "./assets/lender/13.jpg";
+import lender14 from "./assets/lender/14.png";
+import lender15 from "./assets/lender/15.jpg";
+import lender16 from "./assets/lender/16.png";
+import lender17 from "./assets/lender/17.jpg";
+import lender18 from "./assets/lender/18.png";
+import lender19 from "./assets/lender/19.jpg";
+import lender20 from "./assets/lender/20.png";
+import lender21 from "./assets/lender/21.jpg";
+import lender22 from "./assets/lender/22.png";
+import lender23 from "./assets/lender/23.jpg";
+import lender24 from "./assets/lender/24.png";
+import lender25 from "./assets/lender/25.png";
+import lender26 from "./assets/lender/26.png";
+import lender27 from "./assets/lender/27.png";
+import lender28 from "./assets/lender/28.png";
+import lender29 from "./assets/lender/29.png";
+import lender30 from "./assets/lender/30.png";
+import lender31 from "./assets/lender/31.png";
+import lender32 from "./assets/lender/32.png";
+import lender33 from "./assets/lender/33.png";
+import lender34 from "./assets/lender/34.png";
+import lender35 from "./assets/lender/35.png";
+import lender36 from "./assets/lender/36.png";
+import lender37 from "./assets/lender/37.png";
+import lender38 from "./assets/lender/38.png";
+import lender39 from "./assets/lender/39.png";
+import lender40 from "./assets/lender/40.png";
+import lender41 from "./assets/lender/41.png";
+import lender42 from "./assets/lender/42.png";
+import lender43 from "./assets/lender/43.png";
+import lender44 from "./assets/lender/44.png";
+import lender45 from "./assets/lender/45.png";
+import lender46 from "./assets/lender/46.png";
+import lender47 from "./assets/lender/47.png";
+import lender48 from "./assets/lender/48.png";
+import lender49 from "./assets/lender/49.png";
+import lender50 from "./assets/lender/50.png";
+import lender51 from "./assets/lender/51.png";
+
 
 export function LenderPartners() {
   const containerRef = useRef(null);
@@ -35,7 +77,48 @@ export function LenderPartners() {
     { name: "Commonwealth Bank", logo: lender7 },
     { name: "Capital Finance", logo: lender8 },
     { name: "Branded Financial", logo: lender9 },
-    { name: "BOQ", logo: lender10 }
+    { name: "BOQ", logo: lender10 },
+    { name: "Pepper Money", logo: lender11 },
+    { name: "Grow", logo: lender12 },
+    { name: "Flexi Commercial", logo: lender13 },
+    { name: "Firstmac", logo: lender14 },
+    { name: "Finance One", logo: lender15 },
+    { name: "Early Pay", logo: lender16 },
+    { name: "Commonwealth Bank", logo: lender17 },
+    { name: "Capital Finance", logo: lender18 },
+    { name: "Branded Financial", logo: lender19 },
+    { name: "BOQ", logo: lender20 },
+    { name: "Pepper Money", logo: lender21 },
+    { name: "Grow", logo: lender22 },
+    { name: "Flexi Commercial", logo: lender23 },
+    { name: "Firstmac", logo: lender24 },
+    { name: "Finance One", logo: lender25 },
+    { name: "Early Pay", logo: lender26 },
+    { name: "Commonwealth Bank", logo: lender27 },
+    { name: "Capital Finance", logo: lender28 },
+    { name: "Branded Financial", logo: lender29 },
+    { name: "BOQ", logo: lender30 },
+    { name: "Pepper Money", logo: lender31 },
+    { name: "Grow", logo: lender32 },
+    { name: "Flexi Commercial", logo: lender33 },
+    { name: "Firstmac", logo: lender34 },
+    { name: "Finance One", logo: lender35 },
+    { name: "Early Pay", logo: lender36 },
+    { name: "Commonwealth Bank", logo: lender37 },
+    { name: "Capital Finance", logo: lender38 },
+    { name: "Branded Financial", logo: lender39 },
+    { name: "BOQ", logo: lender40 },
+    { name: "Pepper Money", logo: lender41 },
+    { name: "Grow", logo: lender42 },
+    { name: "Flexi Commercial", logo: lender43 },
+    { name: "Firstmac", logo: lender44 },
+    { name: "Finance One", logo: lender45 },
+    { name: "Early Pay", logo: lender46 },
+    { name: "Commonwealth Bank", logo: lender47 },
+    { name: "Capital Finance", logo: lender48 },
+    { name: "Branded Financial", logo: lender49 },
+    { name: "BOQ", logo: lender50 },
+    { name: "BOQ", logo: lender51 },
   ];
 
   // Handle image error by replacing with a placeholder
@@ -78,7 +161,7 @@ export function LenderPartners() {
                   <img 
                     src={lender.logo} 
                     alt={`${lender.name} logo`} 
-                    className="h-12 md:h-16 object-contain filter brightness-0 invert" 
+                    className="h-12 md:h-16 object-contain filter" 
                     onError={(e) => handleImageError(e, lender.name)}
                   />
                 </div>
