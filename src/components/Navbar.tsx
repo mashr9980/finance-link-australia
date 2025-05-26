@@ -12,24 +12,14 @@ import ProductDropdown from "./DropDown";
 export function Logo() {
   return (
     <div className="flex items-center">
-      <div className="text-2xl font-bold gradient-text relative group">
-        FINANCE
-        <span className="relative mx-[-0.1rem] inline-block">
-          <svg width="24" height="24" viewBox="0 0 24 24" className="text-teal-400 transition-all duration-300 group-hover:text-teal-300 rotate-90 transform">
-            <path
-              fill="currentColor"
-              d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <div className="absolute -inset-1 rounded-full bg-teal-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </span>
-        LINK
+      <div className="flex items-center space-x-2 relative group">
+        <img 
+          src="/src/components/assets/logo.png" 
+          alt="Company Logo" 
+          className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
+        />
       </div>
-    </div>
+  </div>
   );
 }
  export function Navbar() {

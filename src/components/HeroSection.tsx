@@ -69,10 +69,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ head, titleShort, titleLong, 
           <div className="relative flex items-center justify-center w-full fade-in" style={{ animationDelay: '0.5s' }}>
             <div className="relative w-[90vw] sm:w-[70vw] lg:w-[50vw] aspect-[3/4] max-w-[500px]">
               {/* Hand and phone image as background */}
-              <div
+              {/* <div
                 className={`absolute inset-0 bg-no-repeat bg-contain bg-center ${shouldShowOverlay ? "hero-overlay-bg" : ""} floating`}
                 style={{ backgroundImage: `url(${image[0]})` }}
-              ></div>
+              ></div> */}
 
               {/* Overlay positioned using flex, no hardcoded left/top */}
               {overlay && (
@@ -81,7 +81,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ head, titleShort, titleLong, 
                     <h3 className="mb-3 text-lg font-bold text-teal-300">Let's get started</h3>
                     <div className="mb-3">
                       <p className="mb-1 text-xs text-gray-300">How much do you want to borrow?</p>
-                      <div className="flex items-center rounded-md bg-dark-surface border border-teal-500/40 px-3 py-2 text-sm">
+                      <div className="flex items-center rounded-md bg-dark-surface border-500/40 px-3 py-2 text-sm">
                         <span className="mr-1 text-teal-400">$</span>
                         <input
                           type="text"

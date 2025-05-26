@@ -25,22 +25,11 @@ export function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link className="inline-block mb-6" to="/">
               <div className="flex items-center">
-                <div className="text-2xl font-bold gradient-text relative group">
-                  FINANCE
-                  <span className="relative mx-[-0.1rem] inline-block">
-                    <svg width="24" height="24" viewBox="0 0 24 24" className="text-teal-400 rotate-90 transform">
-                      <path
-                        fill="currentColor"
-                        d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  LINK
-                </div>
+                <img 
+                      src="/src/components/assets/logo.png" 
+                      alt="Company Logo" 
+                      className="h-24 w-auto transition-all duration-300 group-hover:scale-105"
+                    />
               </div>
             </Link>
             <div className="text-sm text-gray-400 mb-8">
@@ -52,7 +41,7 @@ export function Footer() {
             <div className="mb-8">
               <h3 className="text-white font-semibold mb-3">Email Us At</h3>
               <p className="text-gray-400">
-                Enquiries@finacelinkaustralia.com.au
+                enquiries@financelinkaustralia.com.au
               </p>
             </div>
           </div>
@@ -147,7 +136,9 @@ export function Footer() {
           <div className="text-xs text-gray-500">
             <p>Finance Link Australia is an online finance brokerage service. We partner with funders to provide you access to their expert teams who can assist in selecting suitable finance solutions. As our customer you'll be provided with quotes directly from the lender for the product you intend to purchase. Any ongoing relationship regarding this product or service will continue directly from broker or funder introduced.</p>
             <p className="mt-2">Finance Link Australia does not compare all products in the market. The availability of products compared may change from time to time. Not all products available from our partners are compared and not all products are available to all customers.</p>
-            <p className="mt-2">DLC Finance Pty Ltd (ABN 80 670 548 991) trading as Financelinkaustralia.com.au is an authorised credit representative (ACR # 552970) of Fintelligence Pty Ltd (Australian Credit Licence #511803).</p>
+            <p className="mt-2">Brands & Funders mentioned on this site are based on commercial relationships held by Finance Link Australia & our funders respectively.</p>
+            <p>DLC Finance Pty Ltd (ABN 80 670 548 991) trading as Financelinkaustralia.com.au is an authorised credit representative (ACR # 552970) of Fintelligence Pty Ltd (Australian Credit Licence #511803).</p>
+            <p>* The comparison rate shown is for a secured loan amount of $30,000 over a term of 5 years based on monthly repayments. Warning: This comparison rate is true only for the examples given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate. Any calculations or estimations do not constitute an offer of credit or a formal credit quote and is only a calculation of what you may be able to achieve based on the information you have entered. It does not consider suitable product features or loan product types. Rates + repayments shown are based on user inputted data. All applications for credit must be verified prior to the formal assessment process. All applications for credit approval are subject to lender credit approval. Approval is not guaranteed. </p>
           </div>
           
           <div className="mt-8 text-center">

@@ -91,8 +91,8 @@ export function Process() {
               {index < processes.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                   <svg width="40" height="12" viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 6H38" stroke="#8B5CF6" strokeWidth="2" strokeDasharray="2 2"/>
-                    <path d="M32 1L38 6L32 11" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M0 6H38" stroke="#0ebab1" strokeWidth="2" strokeDasharray="2 2"/>
+                    <path d="M32 1L38 6L32 11" stroke="#0ebab1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               )}

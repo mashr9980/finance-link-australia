@@ -3,11 +3,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 import { WhyLoveSteps } from "@/Static/WhyLove";
 import "./WhyLoveFloatMe.css";
+import { useNavigate } from 'react-router-dom';
 
 export function WhyLoveFloatMe() {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
   const [isAnimated, setIsAnimated] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isInView && !isAnimated) {
@@ -66,7 +68,10 @@ export function WhyLoveFloatMe() {
         
         {/* Call to action */}
         <div className={`mt-16 text-center transition-all duration-700 delay-600 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <button className="gradient-btn px-8 py-3 rounded-full text-white font-medium hover:shadow-lg transition-all">
+          <button 
+            onClick={() => navigate('/apply-now')}
+            className="gradient-btn px-8 py-3 rounded-full text-white font-medium hover:shadow-lg transition-all"
+          >
             Get Started Today
           </button>
         </div>
