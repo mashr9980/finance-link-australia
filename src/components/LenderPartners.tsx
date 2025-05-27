@@ -204,14 +204,14 @@ export function LenderPartners() {
         </div>
 
         {/* Call to action */}
-        <div className={`mt-12 text-center transition-all duration-700 delay-500 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* <div className={`mt-12 text-center transition-all duration-700 delay-500 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-300 mb-6">
             Want to learn more about our lending partners and find the best option for you?
           </p>
           <button className="gradient-btn px-6 py-3 rounded-full text-white font-medium hover:shadow-lg transition-all">
             View All Lenders
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

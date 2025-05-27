@@ -105,13 +105,13 @@ export function Stepper() {
                     ))}
                 </div>
 
-                <div className={`relative z-20 mt-12 flex justify-center transition-all duration-700 delay-700 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                {/* <div className={`relative z-20 mt-12 flex justify-center transition-all duration-700 delay-700 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <div className="backdrop-blur-md bg-dark-surface/60 border border-teal-500/20 rounded-2xl shadow-xl py-6 px-8 text-center transform hover:scale-105 transition-transform">
                         <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold gradient-text">
                             Surprisingly easy, right?
                         </h3>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -59,9 +59,9 @@ export function WhoAreWe() {
                             <div className="space-y-6 text-gray-300">
                                 <p>
                                     Finance<span className="inline-block mx-1 text-teal-400 rotate-90">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        {/* <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                             <path d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg>
+                                        </svg> */}
                                     </span>Link makes getting the funding you need simple—no complex applications, no hidden fees. We're not just about delivering accurate information; we're committed to fairness, transparency, and setting high standards as we help you reach your financial goals.
                                 </p>
 
@@ -69,9 +69,9 @@ export function WhoAreWe() {
                                     For too long, the industry has struggled to connect people with lenders who truly meet their needs—especially when speed matters.
 
                                     At Finance<span className="inline-block mx-1 text-teal-400 rotate-90">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        {/* <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                             <path d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg>
+                                        </svg> */}
                                     </span>Link, we're here to change that from the ground up—offering fast, reliable solutions through a clear, simple 1-2-3 process.
                                 </p>
                                 

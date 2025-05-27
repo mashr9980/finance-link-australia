@@ -72,9 +72,9 @@ export const LoanBenefits: React.FC<LoanBenefitsProps> = ({ titleShort, titleLon
                       Apply Now
                     </button>
                   </Link>
-                  <button className="bg-transparent hover:bg-teal-900/20 text-white font-medium px-6 py-3 border border-teal-500/40 rounded-full transition-all hover:border-teal-500/60">
+                  {/* <button className="bg-transparent hover:bg-teal-900/20 text-white font-medium px-6 py-3 border border-teal-500/40 rounded-full transition-all hover:border-teal-500/60">
                     Learn More
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

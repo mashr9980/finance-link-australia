@@ -82,11 +82,11 @@ const MeetTeam = () => {
           ))}
         </div>
         
-        <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <button className="gradient-btn px-8 py-3 rounded-full text-white font-medium hover:shadow-lg transition-all">
             Join Our Team
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

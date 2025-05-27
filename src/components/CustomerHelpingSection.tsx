@@ -68,9 +68,9 @@ export function CustomerHelpingSection() {
             Experience our commitment to excellence and see why our customers consistently rate us 5 stars.
             Let's start your financial journey together.
           </p>
-          <button className="gradient-btn px-8 py-3 rounded-full text-white font-medium hover:shadow-lg transition-all">
+          {/* <button className="gradient-btn px-8 py-3 rounded-full text-white font-medium hover:shadow-lg transition-all">
             Work With Us
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
