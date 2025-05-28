@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ head, titleShort, titleLong, 
               {/* Overlay positioned using flex, no hardcoded left/top */}
               {overlay && (
                 <div className={`absolute inset-0 flex items-center justify-center p-4 mb-44 ${shouldShowOverlay ? "hero-overlay-main" : ""}`}>
-                  <div className={`w-[65%] dark-card rounded-xl p-5 glow ${shouldShowOverlay ? "hero-overlay" : ""}`}>
+                  <div className={` dark-card rounded-xl p-5 glow ${shouldShowOverlay ? "hero-overlay" : ""}`}>
                     <h3 className="mb-3 text-lg font-bold text-teal-300">Let's get started</h3>
                     <div className="mb-3">
                       <p className="mb-1 text-xs text-gray-300">How much do you want to borrow?</p>

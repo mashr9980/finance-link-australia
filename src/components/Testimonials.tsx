@@ -137,7 +137,7 @@ export function Testimonials() {
           <div className="flex items-center justify-center">
             <h2 className="gradient-text text-3xl font-bold md:text-4xl">about Finance
               <span className="relative mx-1 inline-block">
-                <svg width="24" height="24" viewBox="0 0 24 24" className="text-teal-400 rotate-90 transform">
+                {/* <svg width="24" height="24" viewBox="0 0 24 24" className="text-teal-400 rotate-90 transform">
                   <path
                     fill="none"
                     stroke="currentColor"
@@ -146,7 +146,7 @@ export function Testimonials() {
                     strokeLinejoin="round"
                     d="M13.5 10.5L21 3M21 3H15M21 3V9M10.5 13.5L3 21M3 21H9M3 21L3 15"
                   />
-                </svg>
+                </svg> */}
               </span>
               Link
             </h2>
