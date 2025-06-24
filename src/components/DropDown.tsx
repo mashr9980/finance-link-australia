@@ -1,4 +1,3 @@
-// src/components/DropDown.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +5,6 @@ const ProductDropdown = () => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -54,6 +52,20 @@ const ProductDropdown = () => {
             onClick={() => setOpen(false)}
           >
             Business Loans
+          </Link>
+          <Link
+            to="/vending-finance"
+            className="block px-4 py-2 text-sm text-gray-300 hover:bg-teal-900/20 hover:text-teal-400 transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            Vending Finance
+          </Link>
+          <Link
+            to="/trade-finance"
+            className="block px-4 py-2 text-sm text-gray-300 hover:bg-teal-900/20 hover:text-teal-400 transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            Trade Finance
           </Link>
         </div>
       )}

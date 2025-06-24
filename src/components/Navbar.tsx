@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -30,17 +29,14 @@ export function Logo() {
   const [scrolled, setScrolled] = useState(false);
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  // Function to check if viewport is mobile or tablet
   const checkViewport = () => {
     setIsMobileOrTablet(window.innerWidth < 1024);
   };
 
-  // Set up event listener for window resize
   useEffect(() => {
-    checkViewport(); // Check on component mount
+    checkViewport();
     window.addEventListener('resize', checkViewport);
     
-    // Handle scroll for navbar background change
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -69,13 +65,13 @@ export function Logo() {
     setActiveDropdown(null);
   };
 
-  // Check if path is active
   const isActive = (path: string) => location.pathname === path;
 
-  // Products dropdown items
   const productItems = [
     { name: "Personal Loans", link: "/personal-loans" },
     { name: "Business Loans", link: "/business-loans" },
+    { name: "Vending Finance", link: "/vending-finance" },
+    { name: "Trade Finance", link: "/trade-finance" },
   ];
 
   return (
@@ -87,7 +83,6 @@ export function Logo() {
           <Logo />
         </Link>
 
-        {/* Hamburger Menu Button (Mobile & Tablet) */}
         <button
           className="flex lg:hidden flex-col justify-center items-center w-10 h-10 rounded-md focus:outline-none"
           onClick={toggleMenu}
@@ -98,7 +93,6 @@ export function Logo() {
           <span className={`block w-6 h-0.5 bg-teal-400 mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
 
-        {/* Desktop Navigation (Large Screens) */}
         {!isMobileOrTablet &&
           <NavigationMenu className="block">
             <NavigationMenuList className="flex">
@@ -111,6 +105,22 @@ export function Logo() {
                 </Link>
               </NavigationMenuItem>
               <ProductDropdown />
+              <NavigationMenuItem>
+                <Link
+                  to="/vending-finance"
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/vending-finance') ? 'active text-teal-400' : 'text-gray-300 hover:text-teal-400'}`}
+                >
+                  Vending Finance
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link
+                  to="/trade-finance"
+                  className={`nav-item px-4 py-2 text-sm font-medium ${isActive('/trade-finance') ? 'active text-teal-400' : 'text-gray-300 hover:text-teal-400'}`}
+                >
+                  Trade Finance
+                </Link>
+              </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link
                   to="/about"
@@ -145,7 +155,6 @@ export function Logo() {
             </NavigationMenuList>
           </NavigationMenu>
         }
-        {/* Mobile & Tablet Navigation Menu */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-dark-surface shadow-lg lg:hidden z-30 py-4 backdrop-blur-md border-t border-teal-900/30 transition-all duration-300 ease-in-out">
             <nav className="flex flex-col items-center">
@@ -191,6 +200,20 @@ export function Logo() {
                 )}
               </div>
               <Link
+                to="/vending-finance"
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/vending-finance') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
+                onClick={toggleMenu}
+              >
+                Vending Finance
+              </Link>
+              <Link
+                to="/trade-finance"
+                className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/trade-finance') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
+                onClick={toggleMenu}
+              >
+                Trade Finance
+              </Link>
+              <Link
                 to="/about"
                 className={`px-4 py-3 w-full text-center text-sm font-medium ${isActive('/about') ? 'bg-teal-900/20 text-teal-400' : 'text-gray-300 hover:text-teal-400 hover:bg-teal-900/10'} transition-all duration-200`}
                 onClick={toggleMenu}
@@ -226,5 +249,3 @@ export function Logo() {
     </header>
   );
 }
-
-// export

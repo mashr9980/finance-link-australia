@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../components/assets/finance-link-logo.png";
@@ -6,14 +5,12 @@ import logo from "../components/assets/finance-link-logo.png";
 export function Footer() {
   return (
     <footer className="relative bg-dark-bg pt-16 pb-6 overflow-hidden">
-      {/* Wave SVG */}
       <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full" style={{ marginBottom: '-1px' }} viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#1e1e1e" />
         </svg>
       </div>
       
-      {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-teal-900/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-700/10 rounded-full blur-3xl"></div>
@@ -21,7 +18,6 @@ export function Footer() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Column 1 - Logo and About */}
           <div className="col-span-1 md:col-span-1">
             <Link className="inline-block mb-6" to="/">
               <div className="flex items-center">
@@ -46,13 +42,14 @@ export function Footer() {
             </div>
           </div>
           
-          {/* Column 2 - Company Links */}
           <div className="col-span-1">
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-teal-400 transition-colors">About Us</Link></li>
               <li><Link to="/partners" className="text-gray-400 hover:text-teal-400 transition-colors">Partner With Us</Link></li>
               <li><Link to="/products" className="text-gray-400 hover:text-teal-400 transition-colors">Our Services</Link></li>
+              <li><Link to="/vending-finance" className="text-gray-400 hover:text-teal-400 transition-colors">Vending Finance</Link></li>
+              <li><Link to="/trade-finance" className="text-gray-400 hover:text-teal-400 transition-colors">Trade Finance</Link></li>
               <li><Link to="/legal" className="text-gray-400 hover:text-teal-400 transition-colors">Legal</Link></li>
               <li><Link to="/personal-loans" className="text-gray-400 hover:text-teal-400 transition-colors">Personal Loans</Link></li>
               <li><Link to="/business-loans" className="text-gray-400 hover:text-teal-400 transition-colors">Business Loans</Link></li>
@@ -73,7 +70,6 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Column 3 - Personal Loans */}
           <div className="col-span-1">
             <h3 className="text-white font-semibold mb-4">Personal Loans</h3>
             <ul className="space-y-2">
@@ -87,7 +83,6 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Column 4 - Business Loans */}
           <div className="col-span-1">
             <h3 className="text-white font-semibold mb-4">Business Loans</h3>
             <ul className="space-y-2">
@@ -97,9 +92,10 @@ export function Footer() {
               <li><Link to="/business-loans/Commercial-Fitout" className="text-gray-400 hover:text-teal-400 transition-colors">Commercial Fit Out Finance</Link></li>
               <li><Link to="/business-loans/Unsecured-loan" className="text-gray-400 hover:text-teal-400 transition-colors">Unsecured Finance</Link></li>
               <li><Link to="/business-loans/Business-Overdraft" className="text-gray-400 hover:text-teal-400 transition-colors">Business Overdraft</Link></li>
+              <li><Link to="/business-loans/Vending-finance" className="text-gray-400 hover:text-teal-400 transition-colors">Vending Finance</Link></li>
+              <li><Link to="/business-loans/Trade-finance" className="text-gray-400 hover:text-teal-400 transition-colors">Trade Finance</Link></li>
             </ul>
             
-            {/* Social links */}
             <div className="mt-6">
               <h3 className="text-white font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">

@@ -186,7 +186,7 @@ export function LenderPartners() {
         </div>
 
         {/* Grid layout for smaller screens */}
-        <div className={`md:hidden partner-logos-grid grid grid-cols-2 gap-4 px-4 py-6 transition-all duration-700 delay-300 ${isAnimated ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        {/* <div className={`md:hidden partner-logos-grid grid grid-cols-2 gap-4 px-4 py-6 transition-all duration-700 delay-300 ${isAnimated ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           {lenders.slice(0, 6).map((lender, index) => (
             <div 
               key={`lender-grid-${index}`} 
@@ -201,7 +201,7 @@ export function LenderPartners() {
               />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Call to action */}
         {/* <div className={`mt-12 text-center transition-all duration-700 delay-500 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
