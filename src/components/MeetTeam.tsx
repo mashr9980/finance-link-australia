@@ -29,7 +29,7 @@ const MeetTeam = () => {
           <p className="max-w-2xl mx-auto text-gray-300">Let's meet with our talented team members who are dedicated to helping you achieve your financial goals.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {Team.map((member, index) => (
             <div 
               key={index} 
