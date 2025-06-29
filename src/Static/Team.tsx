@@ -14,11 +14,6 @@ export const Team= [
       description:"Cody@financelinkaustralia.com.au",
       image: team2,
     },
-     {
-      name: "Fawad",
-      role: "Broker Support",
-      description:"Cody@financelinkaustralia.com.au",
-      image: team2,
-    },
+    
   ];
   
